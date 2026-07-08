@@ -1,0 +1,6 @@
+{
+  "name": "Production-Grade RAG Pipeline",
+  "description": "An advanced, interactive Retrieval-Augmented Generation (RAG) pipeline dashboard featuring semantic chunking, custom embeddings, vector storage, FlashRank reranking, and Gemini with auto-fallback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

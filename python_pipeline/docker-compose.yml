@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  rag-pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: production_rag_pipeline
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    volumes:
+      - ./chroma_db:/code/chroma_db
+      - ./logs:/code/logs
+      - ./data:/code/data
+    restart: unless-stopped
